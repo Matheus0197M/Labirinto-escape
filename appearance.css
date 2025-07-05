@@ -1,24 +1,83 @@
-html, body{
+html,
+body {
     margin: 0;
     padding: 0;
-    background: #222;
+    background: #23242a;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: system-ui, sans-serif;
     height: 100vh;
+
 }
 
-canvas{
+canvas {
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
 
-#info{
-    position: absolute;
-    top: 10px;
-    left: 10px;
+#info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #fff;
     font-family: system-ui, sans-serif;
     border-radius: 10px;
+    margin: 10px;
+    background-color: black;
+    padding: 10px;
+}
+
+.feedback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    margin: 10px;
+    background: linear-gradient(#0048b4, #4d0279);
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+}
+
+.feedback button {
+    border-radius: 5px;
+    color: #fff;
+    width: 70px;
+    height: 30px;
+    background-color: rgb(83, 80, 255);
+    box-shadow: 0 0 0 3px lightblue;
+    margin: 5px;
+}
+
+.emotes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 2rem;
+}
+
+.emotes input[type="radio"] {
+    display: none;
+}
+
+.emotes label {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.emotes input[type="radio"]:checked+label {
+    transform: scale(1.3);
+    outline: 2px solid #4CAF50;
+    border-radius: 8px;
+}
+
+.feedback input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    border: none;
 }

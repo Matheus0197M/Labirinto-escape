@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="appearance.css">
     <title>Escape do Labirinto</title>
 </head>
+
 <body>
 
     <div id="info">Use as setas ← ↑ → ↓ para escapar!</div>
     <canvas id="mazeCanvas"></canvas>
+    <br><br>
+
+    <form id="feedbackForm" class="feedback">
+        <p><strong>Qual o seu nome?</strong></p>
+        <input type="text" placeholder="João da Silva" id="nameInput">
+        <p><strong>Entre os três emotes, qual representa mais a sua sensação com o jogo? </strong></p>
+        <div class="emotes">
+            <input type="radio" name="emoji" value="BOM" id="emoji1" class="emoji-input">
+            <label for="emoji1">😀</label>
+
+            <input type="radio" name="emoji" value="MEDIO" id="emoji2" class="emoji-input">
+            <label for="emoji2">😐</label>
+
+            <input type="radio" name="emoji" value="RUIM" id="emoji3" class="emoji-input">
+            <label for="emoji3">😡</label>
+        </div>
+        <p><strong>Deixe sua crítica ou sugestão (opcional): </strong>
+        </p>
+        <input type="text" id="commentInput" placeholder="Achei legal e bacana.">
+        <button type="submit">Enviar</button>
+    </form>
 
     <script src="labb.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="feedback.js"></script>
 </body>
+
 </html>
