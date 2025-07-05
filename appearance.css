@@ -3,19 +3,23 @@ body {
     margin: 0;
     padding: 0;
     background: #23242a;
+    font-family: system-ui, sans-serif;
+    height: 100vh;
+}
+
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: system-ui, sans-serif;
-    height: 100vh;
-
+    padding: 0.5rem;
 }
 
 canvas {
     background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     border-radius: 10px;
+    border: 0.5px solid white;
 }
 
 #info {
@@ -28,6 +32,7 @@ canvas {
     margin: 10px;
     background-color: black;
     padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .feedback {
@@ -41,6 +46,7 @@ canvas {
     border-radius: 20px;
     color: white;
     text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .feedback button {
@@ -48,9 +54,15 @@ canvas {
     color: #fff;
     width: 70px;
     height: 30px;
-    background-color: rgb(83, 80, 255);
-    box-shadow: 0 0 0 3px lightblue;
+    background: #5350ff;
     margin: 5px;
+    border-bottom: 0;
+}
+
+.feedback button:hover {
+    background-color: rgb(180, 236, 255);
+    color: black;
+    border-bottom: 3px solid black;
 }
 
 .emotes {
@@ -80,4 +92,47 @@ canvas {
     margin: 10px;
     border-radius: 8px;
     border: none;
+}
+
+.coment-of-game {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 150px;
+    max-height: 300vh;
+    overflow-y: auto;
+    background: #000;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    word-spacing: 3px;
+    font-size: 0.9rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .coment-of-game {
+        position: static;
+        margin: 10px auto;
+        width: 90%;
+        transform: none;
+    }
+}
+
+.verde {
+    color: green;
+}
+
+.azul {
+    color: blue;
+}
+
+.vermelho {
+    color: red;
+}
+
+.amarelo {
+    color: gold;
+    font-weight: 600;
 }

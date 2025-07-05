@@ -10,29 +10,39 @@
 
 <body>
 
-    <div id="info">Use as setas ← ↑ → ↓ para escapar!</div>
-    <canvas id="mazeCanvas"></canvas>
-    <br><br>
+    <main>
+        <div id="info">Use as setas ← ↑ → ↓ para escapar!</div>
+        <canvas id="mazeCanvas"></canvas>
+        <form id="feedbackForm" class="feedback">
+            <p><strong>Qual o seu nome?</strong></p>
+            <input type="text" placeholder="João da Silva" id="nameInput">
+            <p><strong>Entre os três emotes, qual representa mais a sua sensação com o jogo? </strong></p>
+            <div class="emotes">
+                <input type="radio" name="emoji" value="BOM" id="emoji1" class="emoji-input">
+                <label for="emoji1">😀</label>
+                <input type="radio" name="emoji" value="MEDIO" id="emoji2" class="emoji-input">
+                <label for="emoji2">😐</label>
+                <input type="radio" name="emoji" value="RUIM" id="emoji3" class="emoji-input">
+                <label for="emoji3">😡</label>
+            </div>
+            <p><strong>Deixe sua crítica ou sugestão (opcional): </strong>
+            </p>
+            <input type="text" id="commentInput" placeholder="Achei legal e bacana.">
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
 
-    <form id="feedbackForm" class="feedback">
-        <p><strong>Qual o seu nome?</strong></p>
-        <input type="text" placeholder="João da Silva" id="nameInput">
-        <p><strong>Entre os três emotes, qual representa mais a sua sensação com o jogo? </strong></p>
-        <div class="emotes">
-            <input type="radio" name="emoji" value="BOM" id="emoji1" class="emoji-input">
-            <label for="emoji1">😀</label>
-
-            <input type="radio" name="emoji" value="MEDIO" id="emoji2" class="emoji-input">
-            <label for="emoji2">😐</label>
-
-            <input type="radio" name="emoji" value="RUIM" id="emoji3" class="emoji-input">
-            <label for="emoji3">😡</label>
-        </div>
-        <p><strong>Deixe sua crítica ou sugestão (opcional): </strong>
+    <div class="coment-of-game">
+        <p><strong>O que é este jogo?</strong></p>
+        <p>Este jogo é um Labirinto onde para <span class="azul">você</span> deve chegar à <span
+                class="verde">saída</span>, enquanto evita e escapa dos
+            <span class="vermelho">assassinos</span> que estão espalhados no labirinto.
         </p>
-        <input type="text" id="commentInput" placeholder="Achei legal e bacana.">
-        <button type="submit">Enviar</button>
-    </form>
+        <p>Usando as setas ← ↑ → ↓, você move o seu <span class="azul">personagem</span> pelo labirinto
+            até a <span class="verde">saída</span>.</p>
+        <p>Abaixo está uma caixa para você deixar o seu feedback e um
+            comentário/crítica sobre o <span class="amarelo">game</span>.</p>
+    </div>
 
     <script src="labb.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
