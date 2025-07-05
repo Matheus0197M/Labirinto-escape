@@ -11,8 +11,13 @@
 <body>
 
     <main>
+        <!-- Mensagem inicial -->
         <div id="info">Use as setas ← ↑ → ↓ para escapar!</div>
+
+        <!-- Labirinto para o usuário interagir -->
         <canvas id="mazeCanvas"></canvas>
+
+        <!-- Caixa de feedback -->
         <form id="feedbackForm" class="feedback">
             <p><strong>Qual o seu nome?</strong></p>
             <input type="text" placeholder="João da Silva" id="nameInput">
@@ -32,6 +37,7 @@
         </form>
     </main>
 
+    <!-- São as intruções e os comentários -->
     <div class="coment-of-game">
         <p><strong>O que é este jogo?</strong></p>
         <p>Este jogo é um Labirinto onde para <span class="azul">você</span> deve chegar à <span
@@ -43,7 +49,7 @@
         <p>Abaixo está uma caixa para você deixar o seu feedback e um
             comentário/crítica sobre o <span class="amarelo">game</span>.</p>
     </div>
-
+    <!-- links para os scripts e banco de dados -->
     <script src="labb.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script src="feedback.js"></script>

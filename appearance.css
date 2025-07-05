@@ -1,3 +1,4 @@
+/*Para restaurar tudo, zeramos a margin e o padding*/
 html,
 body {
     margin: 0;
@@ -7,6 +8,7 @@ body {
     height: 100vh;
 }
 
+/*Usei esta main para centrazizar as três divs principais*/
 main {
     display: flex;
     flex-direction: column;
@@ -15,6 +17,7 @@ main {
     padding: 0.5rem;
 }
 
+/*Labirinto*/
 canvas {
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
@@ -22,6 +25,7 @@ canvas {
     border: 0.5px solid white;
 }
 
+/*Instruções iniciais*/
 #info {
     display: flex;
     justify-content: center;
@@ -35,6 +39,7 @@ canvas {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+/*Abaixo estão estilizações sobre a caixa de feedback*/
 .feedback {
     display: flex;
     justify-content: center;
@@ -94,6 +99,9 @@ canvas {
     border: none;
 }
 
+/*Finalmente a caixa lateral, onde comento sobre 
+o que é o jogo e como funciona, além de mencionar 
+sobre o usuário dar feedback novamente*/
 .coment-of-game {
     position: fixed;
     top: 50%;
@@ -111,6 +119,8 @@ canvas {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+
+/*Responsividade para mobile*/
 @media (max-width: 768px) {
     .coment-of-game {
         position: static;
@@ -120,6 +130,9 @@ canvas {
     }
 }
 
+/*Para deixar o layout mais bonito
+ e chamativo, usei cores e 
+destaque em certas palavras chave*/
 .verde {
     color: green;
 }

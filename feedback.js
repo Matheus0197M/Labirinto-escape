@@ -1,3 +1,7 @@
+//Aqui temos toda a parte de funcionalidade
+//e conexão com a API do Supabase, que
+//é um banco de dados, e o nosso
+//site com a caixa de feedback
 const emojiInputs = document.querySelectorAll(".emoji-input");
 
 const nameInput = document.querySelector("#nameInput");
@@ -51,7 +55,7 @@ feedbackForm.addEventListener("submit", async (e) => {
             body: JSON.stringify(payload)
         });
 
-
+        //Retorna OK se der certo ou ERROR se der errado
         if (response.ok) {
             alert("Obrigado pelo feedback!");
             feedbackForm.reset();

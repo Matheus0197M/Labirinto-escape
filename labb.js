@@ -1,3 +1,16 @@
+//Aqui temos desde a criação real do labirinto
+//até como funciona a geração das paredes, 
+//das posições dos assassinos e da saída.
+//Tudo envolve um complexo sistema matemático
+//que decide aleatoriamente como tudo vai 
+//acontecer, por isso, que as vezes temos 
+//partes impossíveis do jogador passar.
+//E falando do jogador, aqui também está 
+//como ele se movimenta no labirinto,
+//que, dividido por quadrados, se move de 
+//quadrado em quadrado para conseguir escapar.
+
+
 const canvas = document.getElementById('mazeCanvas');
 const ctx = canvas.getContext('2d');
 const cols = 20, rows = 20, cellSize = 25;
